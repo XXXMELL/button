@@ -1,0 +1,1 @@
+const button=document.querySelector(".button");let audio=null;function playSound(){audio?(audio.currentTime=0,audio.volume=1,audio.play().catch(o=>console.error("Ошибка воспроизведения:",o))):((audio=new Audio("music.mp3")).volume=1,audio.play().catch(o=>console.error("Ошибка воспроизведения:",o))),button.classList.add("playing")}button.addEventListener("click",playSound);
